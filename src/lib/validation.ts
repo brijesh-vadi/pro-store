@@ -1,5 +1,5 @@
+import { z } from 'zod';
 import { formatePrice } from './utils';
-import { z } from 'Zod';
 
 const currency = z.string().refine((value) => /^\d+(\.\d{2})?$/.test(formatePrice(Number(value))), {
   message: 'Price must have exactly two decimals.',

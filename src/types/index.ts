@@ -1,5 +1,5 @@
 import { productSchema } from '@/lib/validation';
-import { z } from 'Zod';
+import { z } from 'zod';
 
 export type Product = z.infer<typeof productSchema> & {
   id: string;
