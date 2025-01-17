@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from 
 import { EllipsisVertical, ShoppingCart, UserIcon } from 'lucide-react';
 import Link from 'next/link';
 import { DarkModeToggle } from './DarkModeToggle';
+import UserButton from './UserButton';
 
 const Menu = () => {
   return (
@@ -11,11 +12,7 @@ const Menu = () => {
         <nav className='hidden md:flex w-full max-w-xs gap-5'>
           <DarkModeToggle />
           <Button asChild variant='ghost'></Button>
-          <Button asChild>
-            <Link href='/sign-in'>
-              <UserIcon /> Sign In
-            </Link>
-          </Button>
+          <UserButton />
         </nav>
         <nav className='md:hidden'>
           <Sheet>
@@ -30,11 +27,7 @@ const Menu = () => {
                   <ShoppingCart /> Cart
                 </Link>
               </Button>
-              <Button asChild variant='ghost'>
-                <Link href='/sign-in'>
-                  <UserIcon /> Sing In
-                </Link>
-              </Button>
+              <UserButton />
               <SheetDescription></SheetDescription>
             </SheetContent>
           </Sheet>
